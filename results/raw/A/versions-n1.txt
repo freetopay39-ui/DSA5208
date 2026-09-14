@@ -1,0 +1,17 @@
+node: dsa5208-n1
+internal_ip: 10.20.0.11
+captured_utc: 2026-09-14T08:32:18Z
+cpu_model: Intel(R) Xeon(R) CPU @ 2.20GHz
+ubuntu: 24.04 (noble)
+kernel: 7.0.0-1011-gcp
+docker_engine: 29.8.0
+compose: 5.5.1
+containerd: v2.3.5
+base_image_digest: 
+(unavailable)
+built_image_id: sha256:31c620464d54be9714647a2c919dbe656d3f3cc4a2eb6a656e6350d6e1046132
+cassandra: HEAP_NEWSIZE has erroneously been set and will be ignored in combination with G1 (see cassandra-env.sh)
+5.0.9
+nodetool: ReleaseVersion: 5.0.9
+jvm: openjdk version "17.0.20" 2026-07-21
+---

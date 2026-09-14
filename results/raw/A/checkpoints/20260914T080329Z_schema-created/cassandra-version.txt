@@ -1,0 +1,2 @@
+HEAP_NEWSIZE has erroneously been set and will be ignored in combination with G1 (see cassandra-env.sh)
+5.0.9
