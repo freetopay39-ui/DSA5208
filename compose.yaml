@@ -1,0 +1,33 @@
+name: dsa5208-lab
+services:
+  cassandra:
+    build: .
+    image: dsa5208-cassandra:5.0.9
+    container_name: cassandra
+    cap_add: [NET_ADMIN]
+    environment:
+      CASSANDRA_CLUSTER_NAME: DSA5208Project1
+      CASSANDRA_SEEDS: 10.20.0.11
+      CASSANDRA_LISTEN_ADDRESS: auto
+      CASSANDRA_BROADCAST_ADDRESS: ${NODE_IP}
+      CASSANDRA_RPC_ADDRESS: 0.0.0.0
+      CASSANDRA_BROADCAST_RPC_ADDRESS: ${NODE_IP}
+      CASSANDRA_DC: dc1
+      CASSANDRA_RACK: ${NODE_RACK}
+      CASSANDRA_ENDPOINT_SNITCH: GossipingPropertyFileSnitch
+      MAX_HEAP_SIZE: 1G
+      HEAP_NEWSIZE: 256M
+    ports:
+      - "7000:7000"
+      - "9042:9042"
+    volumes:
+      - data:/var/lib/cassandra
+      - ./config:/config:ro
+    healthcheck:
+      test: ["CMD-SHELL", "cqlsh 127.0.0.1 9042 -e 'DESCRIBE CLUSTER' >/dev/null 2>&1"]
+      interval: 20s
+      timeout: 10s
+      retries: 30
+      start_period: 90s
+volumes:
+  data:

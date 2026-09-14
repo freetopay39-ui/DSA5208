@@ -1,0 +1,8 @@
+.env
+*.pem
+*.key
+id_ed25519*
+.venv/
+__pycache__/
+*.tar.gz
+docs/evidence/**/*.png

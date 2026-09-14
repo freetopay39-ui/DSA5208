@@ -1,0 +1,5 @@
+FROM cassandra:5.0.9
+USER root
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends iptables \
+    && rm -rf /var/lib/apt/lists/*
