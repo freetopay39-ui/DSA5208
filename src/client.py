@@ -67,7 +67,11 @@ class NodeClient:
             },
         )
 
-        self.session = self.cluster.connect()
+        try:
+            self.session = self.cluster.connect()
+        except Exception:
+            self.cluster.shutdown()
+            raise
 
     def close(self):
         self.cluster.shutdown()

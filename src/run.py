@@ -6,11 +6,6 @@ from datetime import (
     timezone,
 )
 
-from .client import (
-    Logger,
-    NodeClient,
-)
-
 from .workloads import (
     RUNNERS,
     prepare,
@@ -30,22 +25,39 @@ def new_run_id():
     )
 
 
-def make_clients(logger):
-    return {
-        "n1": NodeClient(
-            "n1",
-            logger,
-        ),
+SCENARIO_ROUTES = {
+    "normal": {"source": "n1", "target": "n3"},
+    "node_stop": {"source": "n1", "target": "n2"},
+    "partition_majority": {"source": "n1", "target": "n2"},
+    "partition_minority": {"source": "n3", "target": "n3"},
+    "partition_cross_side": {"source": "n1", "target": "n3"},
+}
 
-        "n3": NodeClient(
-            "n3",
-            logger,
-        ),
-    }
+
+def make_clients(logger, routes, client_factory=None):
+    """Connect only to this scenario's coordinators, once per unique node."""
+    if client_factory is None:
+        from .client import NodeClient
+
+        client_factory = NodeClient
+
+    by_node = {}
+    try:
+        for node in routes.values():
+            if node not in by_node:
+                by_node[node] = client_factory(node, logger)
+    except Exception:
+        close_clients(by_node)
+        raise
+    return {role: by_node[node] for role, node in routes.items()}
 
 
 def close_clients(clients):
+    closed = set()
     for c in clients.values():
+        if id(c) in closed:
+            continue
+        closed.add(id(c))
         try:
             c.close()
         except Exception:
@@ -106,6 +118,7 @@ def main():
 
     p_run.add_argument(
         "--scenario",
+        choices=list(SCENARIO_ROUTES),
         default="partition_cross_side",
     )
 
@@ -176,21 +189,41 @@ def main():
 
         return
 
+    # Checking saved JSONL and displaying CLI help require no database driver.
+    from .client import Logger
+
     logger = Logger(
         args.log
     )
 
     clients = {}
+    run_id = args.run_id or new_run_id()
+    # Preparation always happens before a fault: ALL writes through n1.
+    # MW/WFR have no preparation writes and need no connection here.
+    routes = (
+        ({"source": "n1"} if args.model in {"ryw", "mr"} else {})
+        if args.cmd == "prepare"
+        else SCENARIO_ROUTES[args.scenario]
+    )
 
     try:
-        clients = make_clients(
-            logger
-        )
-
-        run_id = (
-            args.run_id
-            or new_run_id()
-        )
+        try:
+            clients = make_clients(logger, routes)
+        except Exception as exc:
+            logger.write({
+                "run_id": run_id,
+                "history_id": args.history,
+                "model": args.model,
+                "scenario": getattr(args, "scenario", "prepare"),
+                "operation_id": -1,
+                "phase": "setup",
+                "operation": "connect",
+                "routing": routes,
+                "status": "connection_error",
+                "error_type": type(exc).__name__,
+                "started_utc": datetime.now(timezone.utc).isoformat(),
+            })
+            raise
 
         if args.cmd == "prepare":
             output = prepare(
@@ -218,6 +251,8 @@ def main():
                     write_cl=args.write_cl,
 
                     read_cl=args.read_cl,
+
+                    routing=routes,
 
                     fault_verified=(
                         args.partition_verified

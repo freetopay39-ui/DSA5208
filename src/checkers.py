@@ -106,10 +106,24 @@ def mr(rows):
             "second read did not succeed",
         )
 
-    if val(second) == "v0":
+    # A missing *returned field* is malformed evidence, not a successful
+    # no-row response. In this workload returned=None explicitly means no row.
+    if "returned" not in second:
+        return (
+            "inconclusive",
+            "second read is missing its returned field",
+        )
+
+    if val(second) == "v0" or second["returned"] is None:
         return (
             "witness",
-            "same reader observed v1 then v0",
+            "same reader observed v1 then an old/missing value",
+        )
+
+    if val(second) != "v1":
+        return (
+            "inconclusive",
+            f"unexpected value in v0/v1 workload: {val(second)!r}",
         )
 
     return (

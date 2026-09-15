@@ -9,6 +9,7 @@ def meta(
     write_cl,
     read_cl,
     fault_verified=False,
+    routing=None,
 ):
     return {
         "run_id": run_id,
@@ -22,6 +23,7 @@ def meta(
         "fault_verified": bool(
             fault_verified
         ),
+        "routing": routing,
     }
 
 
@@ -154,7 +156,7 @@ def prepare(
     """
 
     return [
-        clients["n1"].execute(
+        clients["source"].execute(
             {
                 **m,
                 "session_id": "P",
@@ -188,7 +190,7 @@ def ryw(clients, **args):
     out = []
 
     w = write(
-        clients["n1"],
+        clients["source"],
         m,
         1,
         "x",
@@ -203,7 +205,7 @@ def ryw(clients, **args):
     if w["status"] == "ok":
         out.append(
             read(
-                clients["n3"],
+                clients["target"],
                 m,
                 2,
                 "x",
@@ -220,7 +222,7 @@ def mr(clients, **args):
     out = []
 
     w = write(
-        clients["n1"],
+        clients["source"],
         m,
         1,
         "x",
@@ -236,7 +238,7 @@ def mr(clients, **args):
         return out
 
     r1 = read(
-        clients["n1"],
+        clients["source"],
         m,
         2,
         "x",
@@ -252,7 +254,7 @@ def mr(clients, **args):
     ):
         out.append(
             read(
-                clients["n3"],
+                clients["target"],
                 m,
                 3,
                 "x",
@@ -269,7 +271,7 @@ def mw(clients, **args):
     out = []
 
     w1 = write(
-        clients["n1"],
+        clients["source"],
         m,
         1,
         "a",
@@ -284,7 +286,7 @@ def mw(clients, **args):
         return out
 
     w2 = write(
-        clients["n3"],
+        clients["target"],
         m,
         2,
         "b",
@@ -301,7 +303,7 @@ def mw(clients, **args):
 
     out += [
         read(
-            clients["n3"],
+            clients["target"],
             m,
             3,
             "b",
@@ -311,7 +313,7 @@ def mw(clients, **args):
         ),
 
         read(
-            clients["n3"],
+            clients["target"],
             m,
             4,
             "a",
@@ -329,7 +331,7 @@ def wfr(clients, **args):
     out = []
 
     w1 = write(
-        clients["n1"],
+        clients["source"],
         m,
         1,
         "a",
@@ -344,7 +346,7 @@ def wfr(clients, **args):
         return out
 
     r = read(
-        clients["n1"],
+        clients["source"],
         m,
         2,
         "a",
@@ -361,7 +363,7 @@ def wfr(clients, **args):
         return out
 
     w2 = write(
-        clients["n3"],
+        clients["target"],
         m,
         3,
         "b",
@@ -378,7 +380,7 @@ def wfr(clients, **args):
 
     out += [
         read(
-            clients["n3"],
+            clients["target"],
             m,
             4,
             "b",
@@ -388,7 +390,7 @@ def wfr(clients, **args):
         ),
 
         read(
-            clients["n3"],
+            clients["target"],
             m,
             5,
             "a",
