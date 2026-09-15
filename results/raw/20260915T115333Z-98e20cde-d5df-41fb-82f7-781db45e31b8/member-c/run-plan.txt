@@ -1,0 +1,10 @@
+run_id=20260915T115333Z-98e20cde-d5df-41fb-82f7-781db45e31b8
+purpose=fix-validation
+model=mr
+scenario=node_stop
+write_cl=QUORUM
+read_cl=QUORUM
+history_count=1
+source=n1
+target=n2
+fault_node=n3

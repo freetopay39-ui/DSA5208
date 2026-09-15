@@ -1,0 +1,3 @@
+utc	run_id	event	note
+2026-09-15T11:44:55Z	20260915T114455Z-16259ebd-d7cc-49fa-8894-26dc3808ecea	REGISTERED	MR normal ONE/ONE h001
+2026-09-15T11:53:33Z	20260915T115333Z-98e20cde-d5df-41fb-82f7-781db45e31b8	REGISTERED	purpose=fix-validation;model=mr;scenario=node_stop;W=QUORUM;R=QUORUM;histories=1
