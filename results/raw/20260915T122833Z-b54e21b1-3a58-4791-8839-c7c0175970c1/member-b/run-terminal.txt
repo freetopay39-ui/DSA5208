@@ -1,0 +1,3 @@
+1 workload write x ok 10.20.0.11 None
+2 workload read x ok 10.20.0.11 {'value': 'v1'}
+3 workload read x ok 10.20.0.12 {'value': 'v1'}
