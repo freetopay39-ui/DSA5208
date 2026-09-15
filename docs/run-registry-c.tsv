@@ -3,3 +3,4 @@ utc	run_id	event	note
 2026-09-15T11:53:33Z	20260915T115333Z-98e20cde-d5df-41fb-82f7-781db45e31b8	REGISTERED	purpose=fix-validation;model=mr;scenario=node_stop;W=QUORUM;R=QUORUM;histories=1
 2026-09-15T12:28:34Z	20260915T122833Z-b54e21b1-3a58-4791-8839-c7c0175970c1	REGISTERED	purpose=validation;model=mr;scenario=partition_majority;W=QUORUM;R=QUORUM;histories=1
 2026-09-15T12:51:53Z	20260915T125153Z-77000502-905f-4b3d-9b1e-f34f1426a71b	REGISTERED	purpose=validation;model=mr;scenario=partition_minority;W=QUORUM;R=QUORUM;histories=1
+2026-09-15T13:10:55Z	20260915T131055Z-e7055a98-0544-419d-aebe-87995119173a	REGISTERED	purpose=validation;model=mr;scenario=partition_cross_side;W=ONE;R=ONE;histories=1
