@@ -1,0 +1,28 @@
+Cluster Information:
+	Name: DSA5208Project1
+	Snitch: org.apache.cassandra.locator.GossipingPropertyFileSnitch
+	DynamicEndPointSnitch: enabled
+	Partitioner: org.apache.cassandra.dht.Murmur3Partitioner
+	Schema versions:
+		eb22907c-a22e-3532-8bc3-2bb40c00382e: [10.20.0.12, 10.20.0.13, 10.20.0.11]
+
+Stats for all nodes:
+	Live: 3
+	Joining: 0
+	Moving: 0
+	Leaving: 0
+	Unreachable: 0
+
+Data Centers: 
+	dc1 #Nodes: 3 #Down: 0
+
+Database versions:
+	5.0.9: [10.20.0.12:7000, 10.20.0.13:7000, 10.20.0.11:7000]
+
+Keyspaces:
+	system_traces -> Replication class: SimpleStrategy {replication_factor=2}
+	system_distributed -> Replication class: SimpleStrategy {replication_factor=3}
+	system_auth -> Replication class: SimpleStrategy {replication_factor=1}
+	dsa5208 -> Replication class: NetworkTopologyStrategy {dc1=3}
+	system_schema -> Replication class: LocalStrategy {}
+	system -> Replication class: LocalStrategy {}
