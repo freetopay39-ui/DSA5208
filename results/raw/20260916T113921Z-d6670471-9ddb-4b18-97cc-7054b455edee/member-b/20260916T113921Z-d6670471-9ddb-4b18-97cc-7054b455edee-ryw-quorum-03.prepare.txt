@@ -1,0 +1,3 @@
+{"argv": ["/home/li8106600_gmail_com/dsa5208/.venv/bin/python", "-m", "src.run", "prepare", "--model", "ryw", "--history", "20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee-ryw-quorum-03", "--run-id", "20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee", "--log", "/home/li8106600_gmail_com/dsa5208/results/raw/20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee/member-b/20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee-ryw-quorum-03.jsonl"], "started_utc": "2026-09-16T11:41:47.592147+00:00"}
+0 prepare write x ok 10.20.0.11 None
+{"exit_code": 0, "ended_utc": "2026-09-16T11:41:47.907566+00:00"}

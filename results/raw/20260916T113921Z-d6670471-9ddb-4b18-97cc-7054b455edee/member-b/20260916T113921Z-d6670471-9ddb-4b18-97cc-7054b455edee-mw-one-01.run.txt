@@ -1,0 +1,6 @@
+{"argv": ["/home/li8106600_gmail_com/dsa5208/.venv/bin/python", "-m", "src.run", "run", "--model", "mw", "--history", "20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee-mw-one-01", "--run-id", "20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee", "--log", "/home/li8106600_gmail_com/dsa5208/results/raw/20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee/member-b/20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee-mw-one-01.jsonl", "--scenario", "partition_cross_side", "--write-cl", "ONE", "--read-cl", "ONE", "--partition-verified"], "started_utc": "2026-09-16T11:46:00.315029+00:00"}
+1 workload write a ok 10.20.0.11 None
+2 workload write b ok 10.20.0.13 None
+3 diagnostic read b ok 10.20.0.13 {'value': 'second-write;depends-on=a'}
+4 diagnostic read a ok 10.20.0.13 None
+{"exit_code": 0, "ended_utc": "2026-09-16T11:46:00.781155+00:00"}
