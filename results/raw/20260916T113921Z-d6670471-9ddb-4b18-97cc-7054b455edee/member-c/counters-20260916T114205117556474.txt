@@ -1,0 +1,4 @@
+Chain DSA5208_PARTITION (2 references)
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 DROP       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            multiport sports 7000,7001
+   28  7912 DROP       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            multiport dports 7000,7001

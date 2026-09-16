@@ -5,3 +5,4 @@ utc	run_id	event	note
 2026-09-15T12:51:53Z	20260915T125153Z-77000502-905f-4b3d-9b1e-f34f1426a71b	REGISTERED	purpose=validation;model=mr;scenario=partition_minority;W=QUORUM;R=QUORUM;histories=1
 2026-09-16T11:06:24Z	20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538	REGISTERED	formal;F1;normal;40 histories
 2026-09-16T11:24:00Z	20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1	REGISTERED	formal;F2;node_stop;40 histories
+2026-09-16T11:39:21Z	20260916T113921Z-d6670471-9ddb-4b18-97cc-7054b455edee	REGISTERED	formal;F3;partition_cross_side;40 histories
