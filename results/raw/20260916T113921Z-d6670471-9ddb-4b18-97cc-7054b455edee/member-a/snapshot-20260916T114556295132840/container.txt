@@ -1,0 +1,1 @@
+running sha256:31c620464d54be9714647a2c919dbe656d3f3cc4a2eb6a656e6350d6e1046132 dsa5208-lab_default ["CAP_NET_ADMIN"]
