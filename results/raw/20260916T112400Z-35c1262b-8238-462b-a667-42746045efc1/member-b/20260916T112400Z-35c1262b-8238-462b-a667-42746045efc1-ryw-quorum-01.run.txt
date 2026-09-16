@@ -1,0 +1,4 @@
+{"argv": ["/home/li8106600_gmail_com/dsa5208/.venv/bin/python", "-m", "src.run", "run", "--model", "ryw", "--history", "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-quorum-01", "--run-id", "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1", "--log", "/home/li8106600_gmail_com/dsa5208/results/raw/20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1/member-b/20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-quorum-01.jsonl", "--scenario", "node_stop", "--write-cl", "QUORUM", "--read-cl", "QUORUM"], "started_utc": "2026-09-16T11:29:11.648999+00:00"}
+1 workload write x ok 10.20.0.11 None
+2 workload read x ok 10.20.0.12 {'value': 'v1'}
+{"exit_code": 0, "ended_utc": "2026-09-16T11:29:12.065035+00:00"}

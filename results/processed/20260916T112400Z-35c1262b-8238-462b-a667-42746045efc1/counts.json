@@ -1,0 +1,62 @@
+{
+  "planned_histories": 40,
+  "complete_block": true,
+  "counts": [
+    {
+      "model": "mr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "result": "no_witness_observed",
+      "n": 5
+    },
+    {
+      "model": "mr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "result": "no_witness_observed",
+      "n": 5
+    },
+    {
+      "model": "mw",
+      "write_cl": "ONE",
+      "read_cl": "N/A",
+      "result": "no_witness_observed",
+      "n": 5
+    },
+    {
+      "model": "mw",
+      "write_cl": "QUORUM",
+      "read_cl": "N/A",
+      "result": "no_witness_observed",
+      "n": 5
+    },
+    {
+      "model": "ryw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "result": "no_witness_observed",
+      "n": 5
+    },
+    {
+      "model": "ryw",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "result": "no_witness_observed",
+      "n": 5
+    },
+    {
+      "model": "wfr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "result": "no_witness_observed",
+      "n": 5
+    },
+    {
+      "model": "wfr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "result": "no_witness_observed",
+      "n": 5
+    }
+  ]
+}

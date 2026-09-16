@@ -1,0 +1,379 @@
+{
+  "run_id": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1",
+  "scenario": "node_stop",
+  "seed": 5208,
+  "created_utc": "2026-09-16T11:25:11.539130+00:00",
+  "commit": "88219c5807f64b2db1c9040f2442f1e5d073540b",
+  "source_sha256": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checkers.py": "d9fa6e508277955c51ad4c18a1d4381be192c61881131d2cba91efb3fd3d4142",
+    "client.py": "ab036565c8bfb561ed9f8c3cf1e92b0b5297cdb4a6b431ff7f439f56b48d21e8",
+    "formal_batch.py": "dfda139ade1a81db64282808191c285db19d15f8dae855636534155607471c87",
+    "run.py": "67820a797b754fc6d986d786954c57c7287470b7ede5192465ca3a5ae56dc086",
+    "workloads.py": "9e585b6781ffe00970bb18bf7b7d2a5903174f33c4b87ce6b6645b7af7162f28"
+  },
+  "sample_size_per_condition": 5,
+  "diagnostic_cl": "ONE",
+  "items": [
+    {
+      "model": "ryw",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-quorum-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-quorum-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-one-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-one-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-one-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-one-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "QUORUM",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-quorum-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-quorum-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-quorum-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-quorum-02",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "QUORUM",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-quorum-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-one-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-one-02",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "QUORUM",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-quorum-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-one-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-quorum-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-quorum-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-one-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-one-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-one-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-quorum-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-one-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-one-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-quorum-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-quorum-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-one-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-quorum-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "QUORUM",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-quorum-02",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-one-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "QUORUM",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-quorum-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 1,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-one-01",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-quorum-02",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-quorum-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 4,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-quorum-04",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-one-02",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 5,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-one-05",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "wfr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-wfr-one-02",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mw",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": false,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mw-one-02",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "mr",
+      "write_cl": "ONE",
+      "read_cl": "ONE",
+      "read_cl_applicable": true,
+      "repeat": 3,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-mr-one-03",
+      "scenario": "node_stop"
+    },
+    {
+      "model": "ryw",
+      "write_cl": "QUORUM",
+      "read_cl": "QUORUM",
+      "read_cl_applicable": true,
+      "repeat": 2,
+      "history": "20260916T112400Z-35c1262b-8238-462b-a667-42746045efc1-ryw-quorum-02",
+      "scenario": "node_stop"
+    }
+  ]
+}
