@@ -1,0 +1,57 @@
+name: dsa5208-lab
+services:
+  cassandra:
+    build:
+      context: /home/freetopay39_gmail_com/dsa5208
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    container_name: cassandra
+    environment:
+      CASSANDRA_BROADCAST_ADDRESS: 10.20.0.11
+      CASSANDRA_BROADCAST_RPC_ADDRESS: 10.20.0.11
+      CASSANDRA_CLUSTER_NAME: DSA5208Project1
+      CASSANDRA_DC: dc1
+      CASSANDRA_ENDPOINT_SNITCH: GossipingPropertyFileSnitch
+      CASSANDRA_LISTEN_ADDRESS: auto
+      CASSANDRA_RACK: rack1
+      CASSANDRA_RPC_ADDRESS: 0.0.0.0
+      CASSANDRA_SEEDS: 10.20.0.11
+      HEAP_NEWSIZE: 256M
+      MAX_HEAP_SIZE: 1G
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - cqlsh 127.0.0.1 9042 -e 'DESCRIBE CLUSTER' >/dev/null 2>&1
+      timeout: 10s
+      interval: 20s
+      retries: 30
+      start_period: 1m30s
+    image: dsa5208-cassandra:5.0.9
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 7000
+        published: "7000"
+        protocol: tcp
+      - mode: ingress
+        target: 9042
+        published: "9042"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: data
+        target: /var/lib/cassandra
+        volume: {}
+      - type: bind
+        source: /home/freetopay39_gmail_com/dsa5208/config
+        target: /config
+        read_only: true
+        bind: {}
+networks:
+  default:
+    name: dsa5208-lab_default
+volumes:
+  data:
+    name: dsa5208-lab_data
