@@ -1,0 +1,4 @@
+{"argv": ["/home/li8106600_gmail_com/dsa5208/.venv/bin/python", "-m", "src.run", "run", "--model", "ryw", "--history", "20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538-ryw-one-02", "--run-id", "20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538", "--log", "/home/li8106600_gmail_com/dsa5208/results/raw/20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538/member-b/20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538-ryw-one-02.jsonl", "--scenario", "normal", "--write-cl", "ONE", "--read-cl", "ONE"], "started_utc": "2026-09-16T11:12:40.983595+00:00"}
+1 workload write x ok 10.20.0.11 None
+2 workload read x ok 10.20.0.13 {'value': 'v1'}
+{"exit_code": 0, "ended_utc": "2026-09-16T11:12:41.399273+00:00"}

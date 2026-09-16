@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-16T11:12:26.767942+00:00",
+  "gate": {
+    "run_id": "20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538",
+    "scenario": "normal",
+    "verified": true,
+    "verified_utc": "2026-09-16T11:11:43.825524+00:00",
+    "a_evidence": "/home/freetopay39_gmail_com/dsa5208/results/raw/20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538/member-a/snapshot-20260916T110925690171760",
+    "b_evidence": "/home/li8106600_gmail_com/dsa5208/results/raw/20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538/member-b/ports.txt",
+    "c_evidence": "/home/lin1042467351_gmail_com/dsa5208/results/raw/20260916T110624Z-cf03cc10-8c8c-4f06-9e0f-8bdd87b20538/member-c/snapshot-20260916T110719759393725"
+  }
+}
